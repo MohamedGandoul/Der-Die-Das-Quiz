@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der Die Das - German Article Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🇩🇪 Der Die Das</h1>
+            <p>Test your German articles - der, die or das?</p>
+        </header>
+
+        <!-- Start Screen -->
+        <div class="card" id="start-screen">
+            <div class="start-icon">
+                <i class="fas fa-language"></i>
+            </div>
+            <h2>Ready to Play?</h2>
+            <p class="start-text">You'll get 30 German nouns. Pick the right article before the clock runs out!</p>
+            <button id="start-btn" class="primary-btn">
+                <i class="fas fa-play"></i> Start Quiz
+            </button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="card" id="quiz-screen" style="display: none;">
+            <div class="quiz-top">
+                <div class="stat">
+                    <i class="fas fa-star"></i>
+                    <span id="score-display">0</span>
+                </div>
+                <div class="stat">
+                    <span id="question-count">1</span> / <span id="total-count">30</span>
+                </div>
+                <div class="stat timer-stat">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer-display">10</span>s
+                </div>
+            </div>
+
+            <div class="timer-bar-track">
+                <div id="timer-bar" class="timer-bar-fill"></div>
+            </div>
+
+            <div class="word-display">
+                <span id="word-text">Haus</span>
+            </div>
+
+            <div class="choices" id="choices">
+                <button class="choice-btn" data-article="der">der</button>
+                <button class="choice-btn" data-article="die">die</button>
+                <button class="choice-btn" data-article="das">das</button>
+            </div>
+
+            <p id="feedback-text" class="feedback-text"></p>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="card" id="results-screen" style="display: none;">
+            <div class="results-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h2>Quiz Complete!</h2>
+            <p class="results-score">
+                You scored <span id="final-score">0</span> / <span id="final-total">30</span>
+            </p>
+            <p id="results-message" class="results-message"></p>
+
+            <div class="missed-section" id="missed-section">
+                <h3>📝 Words to Review</h3>
+                <div id="missed-list" class="missed-list"></div>
+            </div>
+
+            <button id="restart-btn" class="primary-btn">
+                <i class="fas fa-redo"></i> Play Again
+            </button>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="made-by">
+                    ✨ Made with 💛 by <strong>Mohamed Gandoul</strong>
+                </p>
+                <p class="nickname">
+                    Nickname: <strong>@Pepo</strong>
+                </p>
+                <p class="fun-fact">
+                    🎯 Fun Fact: German articles still keep me on my toes too!
+                </p>
+                <p class="copyright">
+                    DE Der Die Das Quiz © 2026 | Casablanca, Morocco
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/words.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
